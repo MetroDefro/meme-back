@@ -1,1 +1,11 @@
 services:
+  mysql:
+    image: 'mysql:latest'
+    container_name: mysql
+    environment:
+      - 'MYSQL_DATABASE=meme'
+      - 'MYSQL_PASSWORD=secret'
+      - 'MYSQL_ROOT_PASSWORD=verysecret'
+      - 'MYSQL_USER=admin'
+    ports:
+      - '3307:3306'
